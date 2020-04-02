@@ -1,0 +1,37 @@
+.star-rating-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (15px)[5];
+      grid-template-columns: repeat(5, 15px);
+  -ms-grid-rows: 15px;
+      grid-template-rows: 15px;
+  position: relative;
+  width: 75px;
+}
+
+.star-rating-container__item {
+  cursor: pointer;
+  fill: white;
+  height: 15px;
+  width: 15px;
+}
+
+.star-rating-container__item--active {
+  fill: #59d5da;
+}
+
+.star-rating-container-warning {
+  background-color: rgba(255, 0, 0, 0.7);
+  color: white;
+  font-weight: bold;
+  left: -2rem;
+  padding: .5rem;
+  position: absolute;
+  top: 1.5rem;
+  width: 200px;
+}
+
+.star-rating-container-warning--hide {
+  display: none;
+}
+/*# sourceMappingURL=StarRating.css.map */

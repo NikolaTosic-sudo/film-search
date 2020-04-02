@@ -1,0 +1,61 @@
+.home-container {
+  background: linear-gradient(165deg, whitesmoke 0%, rgba(58, 8, 24, 0.918) 22%);
+}
+
+.home-container .item-controller {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 50px;
+      grid-template-rows: 50px;
+  grid-column-gap: 10px;
+  margin: 0 auto;
+  padding-top: 2rem;
+  width: 90%;
+}
+
+.home-container .item-controller__switch {
+  background: none;
+  border: none;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(102, 230, 113, 0.4)), color-stop(68%, rgba(206, 196, 63, 0.774))), -webkit-gradient(linear, left top, right top, from(rgba(102, 230, 113, 0.4)), color-stop(68%, rgba(206, 196, 63, 0.774)));
+  background-image: linear-gradient(90deg, rgba(102, 230, 113, 0.4) 0%, rgba(206, 196, 63, 0.774) 68%), linear-gradient(90deg, rgba(102, 230, 113, 0.4) 0%, rgba(206, 196, 63, 0.774) 68%);
+  border-image-slice: 1;
+  border-left: 3px solid rgba(102, 230, 113, 0.4);
+  border-right: 3px solid rgba(206, 196, 63, 0.774);
+  border-radius: 10px;
+  background-position: 0 0, 0 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 3px;
+  color: white;
+  cursor: pointer;
+  display: block;
+  font-family: "Alegreya Sans", sans-serif;
+  font-weight: bold;
+  letter-spacing: .4rem;
+  outline: none;
+  padding: .2rem;
+  text-transform: uppercase;
+}
+
+@media only screen and (min-width: 500px) {
+  .home-container .item-controller {
+    padding-top: 4rem;
+  }
+  .home-container-main {
+    padding: 2rem;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .home-container .item-controller {
+    margin: 2rem auto 1rem;
+    max-width: 77%;
+  }
+  .home-container-main {
+    padding: 2rem 4rem;
+    margin: 0 auto;
+    max-width: 80%;
+  }
+}
+/*# sourceMappingURL=Home.css.map */
