@@ -51,7 +51,7 @@ class ItemDetails extends Component {
 
   }
 
-  // Takes a date of birth and reformats it to DAY / MONTH / YEAR
+  // Takes a date of birth and re-formats it to DAY / MONTH / YEAR
   formatYearOfBirth = date => date.split('-').reverse().join(' / ');
 
   // Takes a date of birth and returns age
@@ -63,7 +63,7 @@ class ItemDetails extends Component {
     return strArr.length < length ? str : strArr.filter((word, i) => i < length).join(' ') + '...';
   }
 
-  // Toggles visiblity of share bar
+  // Toggles visibility of share bar
   handleShareButton = () => {
     document.querySelector('.item-details-header-info-share-buttons').classList.toggle('item-details-header-info-share-buttons__hide');
   }
