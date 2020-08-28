@@ -10,6 +10,7 @@ import TrailerCarousel from '../../components/TrailerCarousel/TrailerCarousel';
 import Loader from '../../components/Loader/Loader';
 
 import './ItemDetails.css';
+import MainNav from "../MainNav/MainNav";
 
 class ItemDetails extends Component {
 
@@ -373,6 +374,7 @@ class ItemDetails extends Component {
 
     return(
       <div className="item-details" id="item-details-top">
+        <MainNav />
 
         <header className="item-details-header-info"
         style={{
