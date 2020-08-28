@@ -15,18 +15,18 @@ class ItemDetails extends Component {
 
   // Fetches intial details
   componentDidMount() {
-    this.fetchData(this.props.match.params.id);
+    this.fetchData(this.props.match.params.id, this.props.match.params.type);
   }
 
   // Checks if the component received new props and refetches data
-  UNSAFE_componentWillReceiveProps(nextProps) {
-    if (nextProps.match.params.id !== this.props.match.params.id) {
-      this.fetchData(nextProps.match.params.id, nextProps.match.params.type);
+  componentDidUpdate(prevProps) {
+    if (prevProps.match.params.id !== this.props.match.params.id) {
+      this.componentDidMount()
     }
   }
 
   // Fetches data based on property passed
-  fetchData(id, type = this.props.match.params.type) {
+  fetchData(id, type) {
 
     if (type === 'movie') {
 
