@@ -21,53 +21,13 @@ class SearchResults extends Component {
   }
 
   // Checks if new props have been recieved and fetches new data
-  UNSAFE_componentWillReceiveProps(nextProps) {
+  componentDidUpdate(prevProps) {
 
-    if (nextProps.match.params.id !== this.props.match.params.id || this.checkParams(nextProps.match.params.id)) {
-      switch(nextProps.match.params.id) {
-
-        case 'top-rated-movies':
-          this.props.postMoviesTopRated(`https://api.themoviedb.org/3/movie/top_rated?api_key=${this.props.apiKey}&language=en-US&page=1`);
-          break;
-
-        case 'upcoming-movies':
-          this.props.postMoviesUpcoming(`https://api.themoviedb.org/3/movie/upcoming?api_key=${this.props.apiKey}&language=en-US&page=1`);
-          break;
-
-        case 'now-playing-movies':
-          this.props.postMoviesNowPlaying(`https://api.themoviedb.org/3/movie/now_playing?api_key=${this.props.apiKey}&language=en-US&page=1`);
-          break;
-
-        case 'popular-movies':
-          this.props.postMoviesPopular(`https://api.themoviedb.org/3/movie/popular?api_key=${this.props.apiKey}&language=en-US&page=1`);
-          break;
-
-        case 'popular-tv-shows':
-          this.props.postTVPopular(`https://api.themoviedb.org/3/tv/popular?api_key=${this.props.apiKey}&language=en-US&page=1`);
-          break;
-
-        case 'top-rated-tv-shows':
-          this.props.postTVTopRated(`https://api.themoviedb.org/3/tv/top_rated?api_key=${this.props.apiKey}&language=en-US&page=1`);
-          break;
-
-        case 'on-the-air-tv-shows':
-          this.props.postTVOnTheAir(`https://api.themoviedb.org/3/tv/on_the_air?api_key=${this.props.apiKey}&language=en-US&page=1`);
-          break;
-
-        case 'airing-today-tv-shows':
-        this.props.postTVAiringToday(`https://api.themoviedb.org/3/tv/airing_today?api_key=${this.props.apiKey}&language=en-US&page=1`);
-          break;
-
-        case 'popular-people':
-          this.props.getPeoplePopular(`https://api.themoviedb.org/3/person/popular?api_key=${this.props.apiKey}&language=en-US&page=1`);
-          break;
-
-        default:
-          this.props.searchData(`https://api.themoviedb.org/3/search/multi?api_key=${this.props.apiKey}&language=en-US&query=${nextProps.match.params.id}&page=1&include_adult=false`);
-
-      }
+    if (prevProps.match.params.id !== this.props.match.params.id || this.checkParams(prevProps.match.params.id)) {
+      this.componentDidMount()
     }
   }
+
 
   // Handles search results pagination
   handlePagination = pageTransition => {
