@@ -13,12 +13,12 @@ import './ItemDetails.css';
 
 class ItemDetails extends Component {
 
-  // Fetches intial details
+  // Fetches initial details
   componentDidMount() {
     this.fetchData(this.props.match.params.id, this.props.match.params.type);
   }
 
-  // Checks if the component received new props and refetches data
+  // Checks if the component is updated and re-fetches data
   componentDidUpdate(prevProps) {
     if (prevProps.match.params.id !== this.props.match.params.id) {
       this.componentDidMount()
